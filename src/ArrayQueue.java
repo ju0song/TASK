@@ -18,11 +18,11 @@ public class ArrayQueue {
     }
 
     public void peek(){
-        System.out.println(queue[front++]);
+        System.out.println(queue[front+1]);
     }
 
     public void show () {
-        for (int i = 0; i <= rear; i++) {
+        for (int i = front +1 ; i <= rear; i++) {
             System.out.print(queue[i] + " ");
         }
         System.out.println();
@@ -42,19 +42,18 @@ public class ArrayQueue {
         arrayQueue.enqueue(1);
         arrayQueue.enqueue(2);
         arrayQueue.enqueue(3);
-        arrayQueue.enqueue(4);
-        arrayQueue.enqueue(5);
-        arrayQueue.enqueue(6);
         System.out.println("===enqueue  status==");
         arrayQueue.show();
 
         System.out.println("===queue dequeue ==");
         arrayQueue.dequeue();
-        arrayQueue.dequeue();
-        arrayQueue.dequeue();
-        arrayQueue.dequeue();
-        arrayQueue.dequeue();
+
+        System.out.println("===enqueue  status==");
+        arrayQueue.show();
+
         System.out.println("===queue peek ==");
         arrayQueue.peek();
+
+
     }
 }
